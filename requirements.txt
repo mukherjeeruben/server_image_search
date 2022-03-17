@@ -3,7 +3,7 @@ requests~=2.26.0
 numpy~=1.22.3
 scikit-learn~=0.24.2
 nltk~=3.6.7
-tensorflow-gpu~=2.8.0
+tensorflow-cpu
 sqlparse~=0.4.2
 Pillow~=9.0.0
 SQLAlchemy~=1.4.32
