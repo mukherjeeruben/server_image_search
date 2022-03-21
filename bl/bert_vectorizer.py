@@ -8,7 +8,6 @@ bert_model = None
 
 
 def sentence_text_vectorizer():
-    # bert_model = SentenceTransformer('all-mpnet-base-v2')
     dataset = get_null_vector_image_data()
     for item in dataset:
         item['embeddings_vector'] = bert_model.encode(item['alt_image_text']).tolist()

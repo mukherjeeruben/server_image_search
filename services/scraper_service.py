@@ -2,7 +2,7 @@ from flask_restx import Resource
 from models.scraper_model import api, scrape_selection_fields, search_fields
 from bl.scraper import scraper
 from bl.cnn_classifier import predict_image
-from bl.bert_vectorizer import sentence_text_vectorizer, get_similarity
+from bl.bert_vectorizer import sentence_text_vectorizer, get_similarity, set_cache
 import config
 from dal.scraped_db_data import create_scraped_entries, delete_all_data
 
@@ -13,12 +13,12 @@ class DataScraper(Resource):
     def post(self):
         ''' Scrape data from google images'''
         payload = api.payload
-        dataset = scraper(search_cr=payload['SearchKeyWord'])
+        dataset = scraper(selection_criterias=payload['SearchKeyList'])
         if config.CNNFILTER:
             dataset = predict_image(dataset)
         success = create_scraped_entries(dataset)
         if success > 0:
-            response = 'Scraped for ', str(payload['SearchKeyWord'])
+            response = 'Scraped for ' + str(','.join(payload['SearchKeyList']))
             return response
         else:
             return 'Failed to scrape'
@@ -29,6 +29,7 @@ class DataVectorizer(Resource):
     def get(self):
         ''' Vectorize Scraped data'''
         response = sentence_text_vectorizer()
+        set_cache()
         return response
 
 

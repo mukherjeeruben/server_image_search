@@ -23,7 +23,6 @@ def predict(image: Image.Image):
     global model
     if model is None:
         model = load_model()
-
     image = np.asarray(image.resize((299, 299)))[..., :3]
     image = np.expand_dims(image, 0)
     image = image / 127.5 - 1.0

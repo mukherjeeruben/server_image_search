@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="88a112f7-706b-4801-8d5b-c1e18c931650" name="Changes" comment="Covid api for open raw data">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bl/bert_vectorizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/bl/bert_vectorizer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bl/cnn_classifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/bl/cnn_classifier.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bl/scraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/bl/scraper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dal/scraped_db_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/dal/scraped_db_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/prediction_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/prediction_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/scraper_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/scraper_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/scraper_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/scraper_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,10 +112,8 @@
   <component name="XDebuggerManager">
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="set(regular_expression.findall('[a-z]{2,}', item['title'].lower()))" language="Python" />
-        <watch expression="regular_expression.findall('[a-z]{2,}', item['title'].lower())" language="Python" />
-        <watch expression="' '.join(set([lemmatizer.lemmatize(word) for word in item['title']]))" language="Python" />
-        <watch expression="dataset" language="Python" />
+        <watch expression="actual_image.get_attribute('src')" language="Python" />
+        <watch expression="requests.get('https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png').content" language="Python" />
       </configuration>
     </watches-manager>
   </component>

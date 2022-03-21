@@ -29,7 +29,7 @@ def update_vectorized_data(dataset):
         result = execute_query(query=query, query_params=query_parameters)
         return result
     else:
-        return 'All images vectorized'
+        return 'All images are already vectorized'
 
 
 def delete_all_data():
