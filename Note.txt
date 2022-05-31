@@ -1,0 +1,9 @@
+AWS Instance - 16 GB Disk Space
+
+pip3 install torch --no-cache-dir
+pip3 install jinja2==3.0.0
+pip3 install itsdangerous==2.0.1
+pip3 install Werkzeug==2.0.0
+pip3 install tensorflow --no-cache-dir
+
+
