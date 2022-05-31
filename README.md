@@ -1,4 +1,4 @@
 # Image Search Server
-Flask Server app for Image Search with CNN and BERT - Pretrained Model -  With  PostgreSQL  (Cloud Hosted- Heroku)
+Flask Server app for Image Search with CNN and BERT - Pretrained Model -  With  PostgreSQL  (Cloud Hosted- AWS)
 
-Need 1.5 GB disk space on EC2 instance or Heroku for deployment and execute on live server.
+Need 15 GB disk space on AWS EC2 instance or 1.5 GB on Heroku for deployment and execute on live server.
